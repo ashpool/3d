@@ -1,5 +1,5 @@
 difference() {
-    translate([0, -42.5, 0])roundedRect([60, 75, 10], 10, $fn=200);
+    translate([-32.5, -82, 0]) roundedRect2([65, 80, 10], 10, $fn=200);
     translate([0, -30, -5]) cylinder(20, r = 20, center = false);
     translate([0, -50, -5]) cylinder(20, r = 25, center = false);
 }
@@ -7,7 +7,7 @@ difference() {
 rotate([90, 0, 0]) translate([30, 0, 0]) support([10, 50, 5], 5, $fn=200);
 rotate([90, 0, 0]) translate([-30, 0, 0]) support([10, 50, 5], 5, $fn=200);
 
-rotate([90, 0, 0]) translate([-22, 3, 90]) text("Bosch PSR Select", size = 4);
+rotate([90, 0, 0]) translate([-22, 3, 84]) text("Bosch PSR Select", size = 4);
 
 module support(size, radius) {
     difference() {
@@ -25,6 +25,12 @@ module support(size, radius) {
                faces=[[0,1,2,3],[5,4,3,2],[0,4,5,1],[0,3,4],[5,2,1]]
                );
     
+}
+module roundedRect2(size, radius) {
+    minkowski() {
+        cube(size);
+        cylinder(r=2,h=1);
+    }
 }
 
 module roundedRect(size, radius) {
