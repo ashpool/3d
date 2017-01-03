@@ -1,17 +1,22 @@
-difference() {
-    translate([-32.5, -82, 0]) roundedRect2([65, 80, 10], 10, $fn=200);
-    translate([0, -30, -5]) cylinder(20, r = 20, center = false);
-    translate([0, -50, -5]) cylinder(20, r = 25, center = false);
+module hanger() {
+    union() {
+        difference() {
+            translate([-32.5, -82, 0]) roundedRect([65, 80, 10], 10, $fn=200);
+            translate([0, -30, -5]) cylinder(20, r = 20, center = false);
+            translate([0, -50, -5]) cylinder(20, r = 25, center = false);
+        }
+
+        rotate([90, 0, 0]) translate([-24, 3, 84]) linear_extrude(height = 1) {
+            text("Bosch PSR Select", size = 4);
+        }
+        rotate([90, 0, 0]) translate([30, 0, 0]) support([10, 50, 5], 5, $fn=200);
+        rotate([90, 0, 0]) translate([-30, 0, 0]) support([10, 50, 5], 5, $fn=200);
+    }
 }
-
-rotate([90, 0, 0]) translate([30, 0, 0]) support([10, 50, 5], 5, $fn=200);
-rotate([90, 0, 0]) translate([-30, 0, 0]) support([10, 50, 5], 5, $fn=200);
-
-rotate([90, 0, 0]) translate([-22, 3, 84]) text("Bosch PSR Select", size = 4);
-
+    
 module support(size, radius) {
     difference() {
-        roundedRect(size, radius);
+        translate([-4.5, -25, 0]) roundedRect(size, radius);
         translate([0, 20, -5]) cylinder(15, r = 2, center = false);
         translate([0, -20, -5]) cylinder(15, r = 2, center = false);
     }
@@ -26,30 +31,11 @@ module support(size, radius) {
                );
     
 }
-module roundedRect2(size, radius) {
+module roundedRect(size, radius) {
     minkowski() {
         cube(size);
         cylinder(r=2,h=1);
     }
 }
 
-module roundedRect(size, radius) {
-	x = size[0];
-	y = size[1];
-	z = size[2];
-
-	linear_extrude(height=z)
-	hull() {
-		translate([(-x/2)+(radius/2), (-y/2)+(radius/2), 0])
-		circle(r=radius);
-	
-		translate([(x/2)-(radius/2), (-y/2)+(radius/2), 0])
-		circle(r=radius);
-	
-		translate([(-x/2)+(radius/2), (y/2)-(radius/2), 0])
-		circle(r=radius);
-	
-		translate([(x/2)-(radius/2), (y/2)-(radius/2), 0])
-		circle(r=radius);
-	}
-}
+rotate([-90, 0, 0]) hanger();
