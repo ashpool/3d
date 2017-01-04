@@ -1,19 +1,20 @@
 // https://github.com/ashpool/3d/tree/master/bosch-psr-select
 // https://www.thingiverse.com/thing:2013007
+$fn=200;
 
 module hanger() {
     union() {
         difference() {
-            translate([-28, -77, 0]) roundedRect([55, 75, 10], 10, $fn=200);
-            translate([0, -30, -5]) cylinder(20, r = 20, center = false);
-            translate([0, -50, -5]) cylinder(20, r = 22, center = false);
+            translate([-28, -77, 0]) roundedRect([55, 75, 10], 10);
+            translate([0, -30, -5]) cylinder(20, r = 19.5, center = false);
+            translate([0, -50, -5]) cylinder(20, r = 23, center = false);
         }
 
         rotate([90, 0, 0]) translate([-23, 3, 79]) linear_extrude(height = 1) {
             text("Bosch PSR Select", size = 4);
         }
-        rotate([90, 0, 0]) translate([25, -5, 0]) support([9, 55, 4], 5, $fn=200);
-        rotate([90, 0, 0]) translate([-25.5, -5, 0]) support([9, 55, 4], 5, $fn=200);
+        rotate([90, 0, 0]) translate([25, -5, 0]) support([9, 55, 4], 5);
+        rotate([90, 0, 0]) translate([-25.5, -5, 0]) support([9, 55, 4], 5);
     }
 }
     
