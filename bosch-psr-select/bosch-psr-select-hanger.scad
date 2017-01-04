@@ -1,3 +1,6 @@
+// https://github.com/ashpool/3d/tree/master/bosch-psr-select
+// https://www.thingiverse.com/thing:2013007
+
 module hanger() {
     union() {
         difference() {
