@@ -1,6 +1,7 @@
 // https://github.com/ashpool/3d/tree/master/bosch-psr-select
 // https://www.thingiverse.com/thing:2013007
 $fn=200;
+use <../lib/roundedRect.scad>;
 
 module hanger() {
     union() {
@@ -34,12 +35,6 @@ module support(size, radius) {
                faces=[[0,1,2,3],[5,4,3,2],[0,4,5,1],[0,3,4],[5,2,1]]
                );
     
-}
-module roundedRect(size, radius) {
-    minkowski() {
-        cube(size);
-        cylinder(r=2,h=1);
-    }
 }
 
 rotate([-90, 0, 0]) hanger();
