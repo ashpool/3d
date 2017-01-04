@@ -1,4 +1,5 @@
-$fn=200;
+$fa=2;
+$fs=0.8;
 
 height = 33;
 topDiameter = 55;
