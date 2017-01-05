@@ -39,6 +39,6 @@ module support(size, radius) {
 
 union() {
     decoratedMainHolder();
-    rotate([90, 0, 0]) translate([14, 10, -32.5]) support([9, 45, 4], 5);
-    rotate([90, 0, 0]) translate([-14, 10, -32.5]) support([9, 45, 4], 5);
+    rotate([90, 0, 0]) translate([18, 10.5, -32.5]) support([9, 45, 5.5], 5);
+    rotate([90, 0, 0]) translate([-18, 10.5, -32.5]) support([9, 45, 5.5], 5);
 }
