@@ -30,15 +30,16 @@ module holes(holes, rotation) {
     } 
 }
 
-module support(size, radius) {
+module support(size, diameter) {
     difference() {
-        translate([-4.5, -25, 0]) roundedRect(size, radius);
-        translate([0, 15, -5]) cylinder(15, r = 2, center = false);
+        translate([-4.5, -25, 0]) roundedRect(size, 5);
+        translate([2, 13, -5]) cylinder(15, d = diameter, center = false);
+        translate([2, 13, 4]) cylinder(15, d = diameter * 2.5, center = false);
     }    
 }
 
 union() {
     decoratedMainHolder();
-    rotate([90, 0, 0]) translate([18, 10.5, -32.5]) support([9, 45, 5.5], 5);
-    rotate([90, 0, 0]) translate([-18, 10.5, -32.5]) support([9, 45, 5.5], 5);
+    rotate([90, 0, 0]) translate([16, 10.5, -32.5]) support([13, 44, 5.5], 5);
+    rotate([90, 0, 0]) translate([-20, 10.5, -32.5]) support([13, 44, 5.5], 5);
 }
