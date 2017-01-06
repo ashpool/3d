@@ -36,7 +36,7 @@ module mount() {
         translate([0, innerDiameter/2, 0]) cube([screwDiameter * 6, outerDiameter - innerDiameter + 2, length], center=true);
         hollowTube();
         rotate([90, 0, 0]) translate([0, 0, -innerDiameter/2]) cylinder(h = outerDiameter - innerDiameter + 10, d = screwDiameter, center = true);
-    rotate([90, 0, 0]) translate([-0.5, 0, -innerDiameter/2]) cylinder(h = 4, d = holeDiameter, center = true);
+        rotate([90, 0, 0]) translate([-0.5, 0, -innerDiameter/2]) cylinder(h = 4, d = holeDiameter, center = true);
     }
 }
 
