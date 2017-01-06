@@ -4,11 +4,11 @@ use <../lib/roundedRect.scad>;
 
 module base(height, length, diameter) {
     linear_extrude(height = height, center = true, convexity = 10,   twist = 0, slices = 20, scale = 1.0) {
-            hull() {
-                circle(d=diameter);
-                translate([length,0,0]) circle(d=diameter);
-            }
+        hull() {
+            circle(d=diameter);
+            translate([length,0,0]) circle(d=diameter);
         }
+    }
 }
 
 module horn() {
