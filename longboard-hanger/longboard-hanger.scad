@@ -30,17 +30,20 @@ module mount() {
 
 module holes() {
         translate([1, 0, 5]) cylinder(h = 50, d = 5, center = false);
+        translate([1, 0, 37]) cylinder(h = 10, d = 9, center = false);
         translate([10, 0, -50]) cylinder(h = 100, d = 5, center = false);
-        translate([10, 0, -50]) cylinder(h = 65, d = 10, center = false);
+        translate([10, 0, -50]) cylinder(h = 65, d = 9, center = false);
         translate([19, 0, -35]) cylinder(h = 90, d = 5, center = false);
+        translate([19, 0, 37]) cylinder(h = 10, d = 9, center = false);
 }
 
-rotate([180, 0, 90]) difference() {
+rotate([180, 0, 90]) 
+difference() {
     union() {
         horn();
         translate([0, -56, 0]) horn();
         translate([-0.5, -28, 33])  mount();
     }
     holes();
-    translate([0, -55, 0]) holes();
+    translate([0, -56, 0]) holes();
 }
