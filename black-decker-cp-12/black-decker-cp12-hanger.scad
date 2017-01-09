@@ -38,9 +38,14 @@ module support() {
         translate([3, 17.5, 4]) cylinder(15, d = diameter * 2.5, center = false);
         translate([39, 17.5, -5]) cylinder(15, d = diameter, center = false);
         translate([39, 17.5, 4]) cylinder(15, d = diameter * 2.5, center = false);
-    }    
-    translate([3, -18.5, -3]) cylinder(4, d = 3.5, center = false);
-    translate([39, -18.5, -3]) cylinder(4, d = 3.5, center = false);
+    }   
+    difference() {
+        union() {
+            translate([3, -18.5, -3]) cylinder(4, d = 3.5, center = false);
+            translate([39, -18.5, -3]) cylinder(4, d = 3.5, center = false);
+        }
+        translate([-20, -21, -16.5])  rotate([45, 0, 0]) cube([100, 12, 12]);
+    }
 }
 
 difference() {
