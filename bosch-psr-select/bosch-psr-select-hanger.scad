@@ -8,7 +8,7 @@ module hanger() {
     difference() {
         union() {
             translate([-30, -77, 0]) roundedRect2([60, 75, 15], 2);
-            rotate([90, 0, 0]) translate([-23, 5, 79]) linear_extrude(height = 1) {
+            rotate([90, 0, 0]) translate([-23, 5, 77]) linear_extrude(height = 1) {
                 text("Bosch PSR Select", size = 4);
             }
             rotate([90, 0, 0]) translate([24, -5, 2]) support([12, 58, 5], 2);
