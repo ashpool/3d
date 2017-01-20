@@ -28,6 +28,11 @@ module mainBlock(width, depth, frontHeight, backHeight) {
 
 mainBlock(width, depth, frontHeight, backHeight);
 
-for(d = [1:12]) {
-    translate ([((d * (d + 1)) / 2) + d * 1.5, -10, 0]) cylinder(backHeight + 1, d = d);
+holes = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10];
+for(d = [0:13]) {
+    translate ([sumArray(holes, d, 0) + d * 1, d % 2 ? -25 :-10, 20 + (-d * 0.9)]) cylinder(backHeight + 1, d = d);
+    translate ([-2 + sumArray(holes, d, 0) + d * 1, d % 2 ? -35 :-10, 50]) text(text = str(holes[d]),font = "Arial", size = 3, valign = "center");
 }
+
+function sumArray(arr, i, sum) = i < 0 ? sum : sumArray(arr, i - 1, arr[i] + sum);
+
