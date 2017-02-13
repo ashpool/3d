@@ -5,25 +5,26 @@ use <../lib/roundedRect.scad>;
 module base(height, length, diameter) {
     linear_extrude(height = height, center = true, convexity = 10,   twist = 0, slices = 20, scale = 1.0) {
         hull() {
-            circle(d=diameter);
-            translate([length,0,0]) circle(d=diameter);
+            translate([-4, 3, 0]) circle(d=diameter/2);
+            translate([-4, -3, 0]) circle(d=diameter/2);
+            translate([length, 3,0]) circle(d=diameter/2);
+            translate([length, -3, 0]) circle(d=diameter/2);
         }
     }
 }
 
 module horn() {
     difference() {
-        base(80, 20, 15);
+        base(80, 23, 17);
         rotate([90, 90, 0]) translate([5, -5, 0]) base(30, 20, 15);
     }   
 }
 
 module mount() {
     difference() {
-        translate([-7, -35.5, -4]) roundedRect2([42, 71, 11], 7.5);
-        translate([4, -15, -10]) roundedRect2([20, 30, 20], 7.5);
-        for(x=[0:6]) {
-            rotate([0, 90, 0]) translate([-7, 7 * x -21, -20]) cylinder(h = 65, d = 4, center = false);
+        translate([-8, -34, -4]) roundedRect2([35.50, 68, 11], 4);
+        for(x=[0:5]) {
+            rotate([0, 90, 0]) translate([-7, 7 * x -18, -20]) cylinder(h = 65, d = 4, center = false);
         }
     }
 }
@@ -37,12 +38,12 @@ module holes() {
         translate([19, 0, 37]) cylinder(h = 10, d = 10.5, center = false);
 }
 
-rotate([180, 0, 90]) 
+rotate([0, 90, 0]) 
 difference() {
     union() {
         horn();
         translate([0, -56, 0]) horn();
-        translate([-0.5, -28, 33])  mount();
+        translate([-0.25, -28, 33])  mount();
     }
     holes();
     translate([0, -56, 0]) holes();
