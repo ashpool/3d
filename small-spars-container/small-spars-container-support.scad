@@ -15,5 +15,5 @@ module support() {
 
 support();
 
-translate([0, 0, 35]) writecylinder("It is not down in any map;",[0,0,0],25,40,center=true,down=0,rotate=0);
-translate([0, 0, 28]) writecylinder(" true places never are.",[0,0,0],25,40,center=true,down=0,rotate=0);
+//translate([0, 0, 35]) writecylinder("It is not down in any map;",[0,0,0],25,40,center=true,down=0,rotate=0);
+//translate([0, 0, 28]) writecylinder(" true places never are.",[0,0,0],25,40,center=true,down=0,rotate=0);
