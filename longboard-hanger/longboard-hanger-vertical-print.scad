@@ -30,11 +30,9 @@ module mount() {
 
 module holes() {
   translate([1, 0, 5]) cylinder(h = 50, d = 5, center = false);
-  translate([1, 0, 37]) cylinder(h = 10, d = 10.5, center = false);
   translate([10, 0, -50]) cylinder(h = 100, d = 5, center = false);
   translate([10, 0, -50]) cylinder(h = 65, d = 10.5, center = false);
   translate([19, 0, -35]) cylinder(h = 90, d = 5, center = false);
-  translate([19, 0, 37]) cylinder(h = 10, d = 10.5, center = false);
 }
 
 rotate([180, 0, 90])
