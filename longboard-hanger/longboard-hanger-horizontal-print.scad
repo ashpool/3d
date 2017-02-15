@@ -38,7 +38,7 @@ module holes() {
         translate([19, 0, 37]) cylinder(h = 10, d = 10.5, center = false);
 }
 
-rotate([180, 0, 0]) 
+rotate([0, 90, 0]) 
 difference() {
     union() {
         horn();
