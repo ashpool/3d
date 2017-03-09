@@ -1,0 +1,69 @@
+
+
+inscription = "Carolina Reaper";   
+
+/* [Overall sign dimensions] */
+
+// total width of sign. Adjust for sufficient space to comfortably accomodate all letters
+width = 90;				// [40:200]
+
+bottom_plate_depth = 6;		// [0.4:0.2:50]
+
+bottom_plate_height = 2;		// [0.4:0.2:50]
+
+back_plate_depth = 2;			// [0.4:0.2:50]
+
+back_plate_height = 4;			// [0.4:0.2:50]
+
+peg_length = 70;			// [10:180]
+
+// distance as percentage of sign width
+peg_distance = 67;                      // [10:100]
+
+// Strength of ground pegs
+peg_width = 4;				// [1:32]
+
+peg_joint_radius = bottom_plate_depth-peg_width;
+
+
+/* [Font Settings] */
+font="Pacifico";			// [Lobster, Pacifico, Chewy ]
+
+// distance of first letter from left edge
+indent=0;				// [0:40]
+
+text_height = 10;			// [8:64]
+
+// How far letters protrude from back plate
+text_emboss = 2;			// [0:16]
+
+// extent of back plate and letter merging region
+text_overlap=2;				// [1:16]
+
+// letter distance. The smaller, the closer the letters. Making them touch each other increases mechanical stability.
+text_spacing=0.9;			// [0.5:0.01:3]
+
+/* [Horizontal helper beam for i and j dots] */
+beam_start=90;				// [0:200]
+
+// set beam end smaller than beam start for no beam at all
+beam_end=110;				// [0:200]
+
+// beam elevation as percentage of font height
+beam_elev=88;				// [0:100]
+
+beam_height=1;				// [0:100]
+
+beam_depth=1;				// [0:10]
+
+
+
+$fn = 60;				// [8:90]
+
+// --------------------------------------------------------------------------------------------------------------
+
+
+use <./herbs.thingievers.scad>;
+
+
+tag();
