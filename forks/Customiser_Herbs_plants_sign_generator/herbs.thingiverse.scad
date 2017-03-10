@@ -1,11 +1,11 @@
 
 
-inscription = "Fatalii";   
+inscription = "Wooly Blue Jay";   
 
 /* [Overall sign dimensions] */
 
 // total width of sign. Adjust for sufficient space to comfortably accomodate all letters
-width = 33;				// [40:200]
+width = 85;				// [40:200]
 
 bottom_plate_depth = 6;		// [0.4:0.2:50]
 
