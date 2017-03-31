@@ -9,15 +9,15 @@ expansion_factor = 1.11;		// wiggle room, adjust if you dare!
 goldenratio = 1.61803399;
 
 // uncomment either of these to create a 5 or 6-way hub
-//build_half_hexago();
+build_half_hexagon();
 //build_hexagon();
-build_pentagon();
+//build_pentagon();
 
 
-module build_half_hexago() {
+module build_half_hexagon() {
     difference() {
         build_hexagon();
-        translate([-30, 11, -10]) cube([60, 30, 20], false);
+        translate([-30, 13, -10]) cube([60, 30, 20], false);
     }
 }
 
