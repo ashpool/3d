@@ -68,8 +68,8 @@ module captive_nut() {
 
 // make it!
 d = 20.5;
-for (x = [0:3]) {
-    for (y = [0:3]) {
+for (x = [0:3   ]) {
+    for (y = [0:1]) {
         translate([x * d, y * d, 0]) strut_cap();
     }
 }
