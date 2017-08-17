@@ -1,8 +1,8 @@
 // Pen holder, Rite In The Rain
 $fn     = 100;
-pd      = 10.3;    // pen diameter
-height  = 16;       // height of holder
-mat_t   = 1;        // materiale thickness
+pd      = 10.1;    // pen diameter
+height  = 22;       // height of holder
+mat_t   = 1.5;        // materiale thickness
 mat_tp  = 1;      // materiale thickness of cylinder
 paper_thinckness = 0.7;
 
@@ -18,5 +18,5 @@ difference() {
     translate([28, pd*0.5, pd*0.5])cube(size=[10, pd*2, height*2], center=true);
 }
 translate([23, mat_t/2, 0])cylinder(d=mat_t, h=height, center=false);
-translate([23, paper_thinckness+mat_t*1.5, 0])cylinder(d=mat_t, h=height, center=false);
+translate([23, paper_thinckness+mat_t*1.5, 0]) cylinder(d=mat_t, h=height, center=false);
 //translate([10, 2, 10]) cube([3.5, 3.5, 3.5]);

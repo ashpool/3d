@@ -106,7 +106,7 @@ tolerance=0.5; // [0:0.1:10]
 /* [BRACKET] */
 
 // Bracket's main size
-bracket_size=40; // [0:250]
+bracket_size=10; // [0:250]
 
 // Bracket's back lenght
 stop_lenght=15; // [0:250]
