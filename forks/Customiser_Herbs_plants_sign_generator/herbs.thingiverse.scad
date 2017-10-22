@@ -1,6 +1,6 @@
 
 
-inscription = "Santa Fe Grande";   
+inscription = "Moruga Scorpion";   
 
 /* [Overall sign dimensions] */
 
