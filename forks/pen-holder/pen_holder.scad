@@ -1,6 +1,6 @@
 // Pen holder, Rite In The Rain
 $fn     = 100;
-pd      = 10;    // pen diameter
+pd      = 9.9;    // pen diameter
 height  = 22;       // height of holder
 mat_t   = 1.0;        // materiale thickness
 mat_tp  = 1;      // materiale thickness of cylinder
