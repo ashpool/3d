@@ -1,8 +1,8 @@
-text = "Magic Sauce";
-size = 6.5;
+text = "TRATTKANRARELL";
+size = 4.4;
 font = "Arial Black";
 
-korken13(); // korken() for larger jars 
+korken(); // korken() for larger jars 
 
 // Smaller => http://www.ikea.com/us/en/catalog/products/40378571/
 module korken13() {
