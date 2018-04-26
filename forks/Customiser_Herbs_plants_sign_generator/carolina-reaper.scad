@@ -1,6 +1,6 @@
 
 
-inscription = "Carolina Reaper";   
+inscription = "Pimenta Diomar";   
 
 /* [Overall sign dimensions] */
 
