@@ -1,8 +1,8 @@
 $fn = 400;
 
 diameter = 190;
-thickness = 2;
-height = 190;
+thickness = 1.6; // 4 layers
+height = 190 / 2;
 
 module base() {
     difference() {
