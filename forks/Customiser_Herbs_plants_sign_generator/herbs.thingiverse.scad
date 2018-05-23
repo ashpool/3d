@@ -1,11 +1,11 @@
 
 
-inscription = "Pimenta Diomar";   
+inscription = "Tabasco";   
 
 /* [Overall sign dimensions] */
 
 // total width of sign. Adjust for sufficient space to comfortably accomodate all letters
-width = 87;				// [40:200]
+width = 47;				// [40:200]
 
 bottom_plate_depth = 6;		// [0.4:0.2:50]
 
