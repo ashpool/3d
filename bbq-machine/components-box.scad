@@ -8,6 +8,13 @@ thickness = 2;
 
 
 box();
+
+// Shelves (add as many as you need)
+translate([0, 15, 0]) shelf(39, 2);
+translate([0, -20, 0]) shelf(54.5, 2);
+translate([0, -30, 0]) shelf(50.5, 2);
+    
+
 translate([0, 0, height/2 + thickness]) lid();
 
 /* Example lid
@@ -41,7 +48,6 @@ module hole(x) {
     }
 }
 
-
 module box() {
     // box
     difference() {
@@ -49,13 +55,6 @@ module box() {
         translate([0, 0, thickness]) cube(size = [width - thickness, length - thickness, height], center = true);
     }
     
-    // Shelves
-    union() {
-        translate([0, 15, 0]) shelf(39, 2);
-        translate([0, -20, 0]) shelf(54.5, 2);
-        translate([0, -30, 0]) shelf(50.5, 2);
-    }
-
     // Holes
     x = holeDiameter * 2.5;
     translate([(width - x)/2, (length - x)/2, 0]) hole();

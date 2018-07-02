@@ -1,13 +1,13 @@
 $fn=100;
 
-diam = 140;
-width = 125;
-height = 125;
-thickness = 5;
+diam = 38; // 140;
+width = 32;// 125;
+height = 32; //125;
+thickness = 2;
 
 xOffset = width / 2;
 yOffset = height / 2;
-zOffset = - diam * 0.25;
+zOffset = - diam * 0.26;
 
 difference() {
     union() {
