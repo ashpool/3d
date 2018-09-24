@@ -1,12 +1,13 @@
+// https://github.com/ashpool/3d/tree/master/board-wall-mount
 $fn=64;
 
 // Parameters
 height=150;
-boardThickness=40;
+boardThickness=16;
 cornerRadius=20;
 holeDiameter=5;
 wallThickness=5;
-holeType="countersink"; // "countersink" || "chamfer"
+holeType="chamfer"; // "countersink" || "chamfer"
 
 // Constants
 chamfer=4;
@@ -14,7 +15,7 @@ gr=1.618;
 
 // Generate a pair of wall mounts
 mount();
-translate([0, 2 * boardThickness,0]) mirror([1, 0, 0]) mount();
+translate([0, 1.5 * (2 * wallThickness + boardThickness),0]) mirror([1, 0, 0]) mount();
 
 
 // Code

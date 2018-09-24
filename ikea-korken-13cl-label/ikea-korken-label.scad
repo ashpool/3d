@@ -1,10 +1,10 @@
-text = "Chili/Rabarber";
-text2 = "Chutney";
+text = "PAPER LANTERN";
+text2 = "";
 
-font = "Arial Black"
+font = "Arial Black";
 size = 4.6;
 
-x_adjust = -25;
+x_adjust = -30;
 x_adjust2 = -15;
 z_adjust = -2.5;
 
