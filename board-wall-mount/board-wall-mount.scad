@@ -3,7 +3,7 @@ $fn=64;
 
 // Parameters
 height=150;
-boardThickness=16;
+boardThickness=56;
 cornerRadius=20;
 holeDiameter=5;
 wallThickness=5;
@@ -16,7 +16,6 @@ gr=1.618;
 // Generate a pair of wall mounts
 mount();
 translate([0, 1.5 * (2 * wallThickness + boardThickness),0]) mirror([1, 0, 0]) mount();
-
 
 // Code
 module template1() {
