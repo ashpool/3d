@@ -1,13 +1,16 @@
-text = "PAPER LANTERN";
-text2 = "";
+// https://www.thingiverse.com/thing:2592887
+// https://github.com/ashpool/3d/tree/master/ikea-korken-13cl-label
+
+text = "MAGIC";
+text2 = "SAUCE";
 
 font = "Arial Black";
-size = 4.6;
+size = 6;
 
-x_adjust = -30;
-x_adjust2 = -15;
-z_adjust = -2.5;
-
+x_adjust = -15.5;
+x_adjust2 = -15.5;
+z_adjust = -5;
+z_adjust2 = -1.5;
 
 korken13(); // korken13() for 13 cl version 
 
@@ -23,7 +26,7 @@ module korken13() {
              translate([x_adjust, 1, size + z_adjust]) rotate([90, 0, 0]) linear_extrude(height = 2) {
                 text(text = text, font = font, size = size, center=true);
             }
-            translate([x_adjust2, 1, -size +z_adjust]) rotate([90, 0, 0]) linear_extrude(height = 2) {
+            translate([x_adjust2, 1, -size +z_adjust2]) rotate([90, 0, 0]) linear_extrude(height = 2) {
                 text(text = text2, font = font, size = size, center=true);
             }
         }
