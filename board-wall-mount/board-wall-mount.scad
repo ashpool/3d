@@ -1,3 +1,4 @@
+// https://www.thingiverse.com/thing:3117311
 // https://github.com/ashpool/3d/tree/master/board-wall-mount
 $fn=64;
 
@@ -5,7 +6,7 @@ $fn=64;
 height=150;
 boardThickness=56;
 cornerRadius=20;
-holeDiameter=5;
+holeDiameter=3;
 wallThickness=5;
 holeType="chamfer"; // "countersink" || "chamfer"
 
